@@ -1,0 +1,69 @@
+/* Style for the container */
+body {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.todo-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the input field */
+input[type="text"] {
+  width: calc(100% - 85px); /* Adjusted width to leave space for the button */
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Style for the add button */
+button {
+  background-color: #007bff; /* Blue color for button */
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+/* Style for the list */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for each todo item */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #f9f9f9; /* Light gray background for each item */
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Style for the delete button */
+button.delete-btn {
+  background-color: #dc3545; /* Red color for delete button */
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button.delete-btn:hover {
+  background-color: #c82333; /* Darker shade of red on hover */
+}
