@@ -35,7 +35,7 @@ function App() {
   const deleteTodo = async (id) => {
     try {
       await axios.delete(`http://localhost:3000/todos/${id}`);
-      const updatedTodos = todos.filter((todo) => todo._id !== id);
+      const updatedTodos = todos.filter((todo) => todo.id !== id);
       setTodos(updatedTodos);
     } catch (error) {
       console.error("Error deleting todo:", error);
@@ -53,9 +53,9 @@ function App() {
       <button onClick={addTodo}>Add Todo</button>
       <ul>
         {todos.map((todo) => (
-          <li key={todo._id}>
+          <li key={todo.id}>
             {todo.title}
-            <button onClick={() => deleteTodo(todo._id)}>Delete</button>
+            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
       </ul>
